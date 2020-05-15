@@ -1,0 +1,40 @@
+.about{
+    background-color: #eee;
+  &__container{
+    background-color: #ddd;
+    margin: 5rem;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 1rem 2.5rem 5rem rgba(#000, .2);
+  }
+
+
+
+
+  &__content{
+    border-left: 2px solid #fff;
+    flex: 1;
+    margin-top: 1rem;
+    margin-bottom:  1rem;
+    position: relative;
+    @include respond(tab-port){
+      margin-top: 0;
+      border-left: none;
+    }
+  }
+  &__subj{
+    padding: 0 10rem;
+    &:not(last-child){
+      margin-bottom: 2rem;
+    }
+    @include respond(tab-port){
+    padding: 0 7rem;
+    }
+    @include respond(phone){
+    padding: 0 2rem;
+    }
+  }
+
+
+
+}

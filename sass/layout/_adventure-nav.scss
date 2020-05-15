@@ -1,0 +1,93 @@
+.adventure-side{
+  flex: 0 0 18%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include respond(tab-land){
+    flex-direction: row;
+    justify-content: stretch;
+  }
+
+  &__list{
+    font-size: 1.4rem;
+    letter-spacing: .4rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    @include respond(tab-land){
+      flex-direction: row;
+      width: 100%;
+    }
+  }
+
+  &__item{
+    background-color: rgba(silver, .3);
+    text-align: center;
+    position: relative;
+    @include respond(tab-land){
+        flex:1;
+    }
+
+    &:not(:last-child){
+      margin-bottom: 1rem;
+      @include respond(tab-land){
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__item::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: orange;
+    
+    background-size: 100%;
+    transform: scale(0);
+    transition:
+    transform .3s,
+    width .2s cubic-bezier(1,0,0,1),
+    background-color .2s;
+
+  }
+  &__item:hover::before{
+    transform: scale(1);
+  }
+
+  &__item:active::before{
+      width: 100%;
+    background-color: orange;
+  }
+
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    
+    padding:2rem 3rem;
+    display: block;
+    color: #fff;
+    position:relative;
+    z-index: 5;
+    cursor: pointer;
+    @media   only screen and  (max-width: $phone-medium){
+      padding: 1rem 1.5rem;
+    }
+  }
+  &__link:focus{
+    outline: none;
+  }
+
+
+  &__build{
+    display:flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    @include respond(tab-land){
+      display: none;
+      margin: 0rem;
+    }
+  }
+}

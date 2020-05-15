@@ -1,0 +1,57 @@
+.header{
+  height: 90vh;
+  backface-visibility: hidden;
+  background-image:
+   linear-gradient(
+   to right bottom,
+   rgba($color-primary-light,.4),
+   rgba($color-primary-black,.4))
+   , url(../img/One-sm.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: 20% 50%;
+   position: relative;
+
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+          only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em){
+            background-image:
+             linear-gradient(
+             to right bottom,
+             rgba($color-primary-light,.4),
+             rgba($color-primary-black,.4))
+             , url(../img/One.jpg);
+          }
+  @supports (clip-path: polygon(0 0)){
+    clip-path: polygon(0 0, 100% 0, 100% 90% , 80% 100%, 20% 100%, 0 90%);
+    @include respond(phone){
+        clip-path: polygon(0 0, 100% 0, 100% 95% , 80% 100%, 20% 100%, 0 95%);
+    }
+    @media only screen and (min-width: $bp-hg){
+      clip-path: polygon(0 0, 100% 0, 100% 95% , 80% 100%, 20% 100%, 0 95%);
+      margin-top: 0;
+    }
+  }
+   &__text-box{
+     @include ab-center;
+     text-align: center;
+   }
+
+    &__arrow-button{
+      position: absolute;
+      bottom:0;
+      left:50%;
+      transform:  translateX(-50%);
+    }
+    &__arrow-icon{
+      width: 8rem;
+      height: 8rem;
+      fill: rgba(#fff, 0.7);
+      animation: moveInBottom 1s ease-out 2s;
+      animation-fill-mode: backwards;
+       transition: all 2s;
+         transform: skew(40deg) translateX(20%);
+      &:hover{
+        transform: skew(-45deg) translateX(-20%);
+      }
+    }
+}

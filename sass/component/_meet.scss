@@ -1,0 +1,195 @@
+.meet{
+
+ 
+  &__icon-box{
+    position:absolute;
+    top:-100%;
+    right:-2rem;
+    width: 8rem;
+    transform: rotate(30deg);
+
+      @media   only screen and  (max-width: $small-phone){
+        
+        right:4rem;
+        transform: rotate(0deg);
+      }
+  }
+  &__icon{
+    width: 100%;
+  }
+  &__container{
+    display: grid;
+
+   
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+
+    grid-column-gap: 6rem;
+    grid-row-gap: 12rem;
+    padding: 6rem;
+
+    @media   only screen and  (max-width: $bp-medium){
+       grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    }
+    @media   only screen and  (max-width: $small-phone){
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+  }
+
+  &__cards{
+    
+    background-color:  #EEE;
+    box-shadow: 1rem 2rem 4rem rgba(#000, .3);
+    display:grid;
+    grid-template-columns:  repeat(2,1fr);
+    grid-gap:2rem;
+    padding: 2rem;
+    @include respond(phone){
+      grid-gap:1rem;
+      padding: 1rem;
+    }
+    @media   only screen and  (max-width: $small-phone){
+    display:flex;
+    flex-direction: column;
+    }
+  
+  }
+
+  &__card-member{
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    @include flex-item-center;
+    z-index: 2;
+  }
+  &__card-image{
+    
+    margin-top: -15rem;
+    width: 25rem;
+    height: 25rem;
+    object-fit: cover;
+    display: block;
+    border-radius: 100%;
+    border: .1px solid #000;
+    @media   only screen and  (max-width: $small-phone){
+      width: 15rem;
+      height: 15rem;
+    }
+  }
+  &__card-name{
+   
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    @include flex-item-center(end, center);
+    
+    background-color: rgba(#fff, 0.8);
+    padding: 1.2rem 4rem;
+   
+    font-size: 2rem;
+    letter-spacing: 1.4rem;
+    font-weight: 700;
+    font-style: italic;
+    text-transform: uppercase;
+    color: #1ADBFE;
+    z-index: 3;
+
+    @media   only screen and  (max-width: $small-phone){
+      font-size: 1.6rem;
+      letter-spacing: 0;
+    }
+
+  }
+  
+  &__devil-fruit{
+    
+    display: flex;
+    align-items: center;
+
+    svg {
+      width:3rem;
+      height: 3rem;
+      fill: orangered;
+    }
+    p{
+      font-size: 1rem;
+      font-weight: 400;
+      margin-left: 1rem;
+      letter-spacing: .2rem;
+      text-transform: uppercase;
+    }
+  
+  }
+
+  &__bounty, &__trophy{
+    display: flex;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1 /-1;
+    margin-left: -2rem;
+    @media   only screen and  (max-width: $small-phone){
+      justify-content: start;
+    }
+    svg{
+      width:4rem;
+      height:4rem;
+      margin-right:1rem;
+    }
+    p {
+      font-size: 1.3rem;
+      font-weight: 400;
+    }
+  }
+
+
+  &__bounty{
+    svg{fill: red;}
+    p {letter-spacing: .7rem;
+      @media   only screen and  (max-width: $small-phone){
+       letter-spacing: 0;
+      }
+    }
+  }
+
+
+   &__trophy{
+     padding: 2rem;
+     @media   only screen and  (max-width: $small-phone){
+      padding: 0;
+     }
+     svg{fill: var(--color-primary);}
+     p {
+       letter-spacing: 1rem;
+       font-weight: 700;
+       @media   only screen and  (max-width: $small-phone){
+        letter-spacing: 0;
+       }
+     }
+     p span {
+         display: block;
+         text-align: center;
+        
+     }
+   }
+
+
+  &__crew-icon{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    padding: 3rem;
+  }
+  &__description{
+    display: flex;
+    align-items: center;
+    svg{
+      width: 5rem;
+      height: 5rem;
+      fill: orangered;
+      margin-right: 1.5rem;
+    }
+    p{
+      color: #777;
+      font-size: 1.4rem;
+    }
+  }
+
+
+}
