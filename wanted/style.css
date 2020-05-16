@@ -1,0 +1,195 @@
+/*初始设置*/
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+/*头部信息样式*/
+.theme{
+    text-align: center; 
+    padding-top: 60px;
+    padding-bottom: 10px;
+}
+.theme > .logo{}
+.theme > .logo > img{
+    border-radius:50%;
+    border: 1px solid #000;
+    margin-bottom: 34px; 
+}
+.theme .slogan{
+}
+.theme .slogan > li{
+    display: inline-block;
+    background: #D8D8D8;
+    min-width: 128px;
+    margin-bottom: 24px;
+    margin-left: 10px;
+    margin-right: 10px;
+    line-height: 24px;
+}
+
+/*中间banner样式*/
+.banner {
+    background: #efefef;
+    text-align: center;
+    padding-bottom: 50px;
+}
+.banner > .two-line-head{
+    padding-top: 56px;
+    padding-bottom: 26px;
+}
+.banner > .one-line-head{
+    display: none;
+}
+.banner > .two-line-head > h2{
+    display: block;
+    background:#d8d8d8;
+    max-width: 240px;
+    line-height: 40px;
+    border-radius: 14px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 0 1em;
+}
+.banner > p{
+    display: block;
+    background:#e8e8e8;
+    border-radius: 14px;
+    max-width: 300px;
+    line-height: 24px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+@media(min-width:500px){
+    .banner > .two-line-head{
+        display: none
+    }
+    .banner > .one-line-head{
+        display: block;
+        padding-top: 56px;
+        padding-bottom: 26px;
+    }
+    .banner > .one-line-head > h2{
+        display: block;
+        background:#d8d8d8;
+        max-width: 400px;
+        line-height: 40px;
+        border-radius: 14px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        padding: 0 1em;
+    }
+   .banner > p{
+        display: block;
+        background:#e8e8e8;
+        border-radius: 14px;
+        max-width: 536px;
+        line-height: 24px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+        
+}
+/*子项目部分*/
+.banner{
+    background: #A5D9E6;
+    text-align: center;
+    padding-top: 46px;
+}
+.banner h2{
+    display: inline-block;
+    background: #D8D8D8;
+    border-radius: 14px;
+    min-width: 200px;
+    margin: 10px auto;
+    line-height: 40px;
+}
+.banner .details{
+    padding-top: 16px;
+    padding-bottom: 30px;
+}
+.banner > .details  p{
+    background: #E8E7E7;
+    max-width: 250px;
+    border-radius: 14px;
+    margin: 20px auto;
+    line-height: 24px;
+}
+.banner > .one-line-header{
+    display: none;
+ }
+ .banner > .one-line-header > h2{
+    padding-left: 2.75em;
+    padding-right: 2.75em;
+ }
+
+@media (min-width:500px){
+    .banner > .two-line-header{
+        display: none;
+    }
+    .banner > .one-line-header{
+        display: block;
+    } 
+    .banner > .details  p{
+        max-width: none;
+        margin-left: 52px;
+        margin-right: 52px;
+    }
+
+}
+
+/*子项目模块*/
+.main{
+    margin:0 16px; 
+}
+main > ul{
+    padding: 0;
+    list-style: none;
+    padding-top: 10px;  
+}
+.main li > img{
+    background:#d8d8d8;
+    border-radius:4px;
+    margin-top: 32px;
+}
+@media (min-width: 500px){
+    .main > ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .main > ul > li{
+        width: calc(50% - 16px);
+        box-sizing: border-box;
+
+    }
+}
+@media (min-width: 1000px){
+    .main > ul > li{
+        width: calc(33.333333% - 23.333333px);
+    }
+}
+@media (min-width: 1200px){
+    .main > ul{
+        max-width: 928px;
+        margin-left: auto;
+        margin-right: auto;        
+    }
+}
+
+.main li > h3{
+    background:#BD9C6B;
+    border-radius:4px;
+    max-width: 204px;
+    line-height: 24px;
+    margin-top: 20px;
+    margin-bottom: 14px;
+}
+.main li > p{
+    background:#DEBD9D;
+    border-radius:4px;
+    line-height: 16px;
+    font-size: 14px;
+}
