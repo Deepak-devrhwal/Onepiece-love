@@ -193,3 +193,7 @@ main > ul{
     line-height: 16px;
     font-size: 14px;
 }
+a{
+    text-decoration: none;
+    color: black;
+}
